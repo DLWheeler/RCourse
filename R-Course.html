@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<style type='text/css'>
+
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em 1em 2em;
+  line-height: 20px;
+}
+
+/* element spacing */
+
+p, pre { 
+  margin: 0em 0em 1em;
+}
+
+/* center images and tables */
+img, table {
+  margin: 0em auto 1em;
+}
+
+p {
+  text-align: justify;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 1.2em 0em 0.6em 0em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 250%;
+  font-weight: normal;
+  color: #87b13f;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 160%;
+  font-weight: normal;
+  line-height: 1.4em;
+  border-bottom: 1px #1a81c2 solid;
+}
+
+h3 {
+  font-size: 130%;  
+}
+
+h2, h3 {
+  color: #1a81c2;
+}
+
+h4, h5, h6 {
+  font-size:115%;
+} /* not expecting to dive deeper than four levels on a single page */
+
+/* links are simply blue, hovering slightly less blue */
+a { color: #1a81c2; }
+a:active { outline: none; }
+a:visited { color: #1a81c2; }
+a:hover { color: #4c94c2; }
+
+pre, img {
+  max-width: 100%;
+  display: block;
+}
+
+pre {
+  border: 0px none;
+  background-color: #F8F8F8;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+pre code {
+  border: 1px #aaa dashed;
+  background-color: white;
+  display: block;
+  padding: 1em;  
+  color: #111;
+  overflow-x: inherit;
+}
+
+/* markdown v1 */
+pre code[class] {
+  background-color: inherit;
+}
+
+/* markdown v2 */
+pre[class] code {
+  background-color: inherit;
+}
+
+
+
+/* formatting of inline code */
+code { 
+  color: #87b13f;
+  font-size: 92%;
+}
+
+/* formatting of tables */
+
+table, td, th {
+  border: none;
+  padding: 0 0.5em;
+}
+
+/* alternating row colors */
+tbody tr:nth-child(odd) td {
+  background-color: #F8F8F8;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title></title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+
+
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+
+
+<div id="a-short-course-in-r-for-biologists" class="section level1">
+<h1>A Short Course in R for Biologists</h1>
+<p><em>“A Short Course in R for Biologists”</em> is a two-day course given in four three-hour sessions entitled: <em>Introduction to R, Introduction to Bioconductor, Introduction to Microarray Analysis</em>, and <em>Introduction to NGS Sequence Analysis</em>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Day</th>
+<th align="left">Morning Session, 9:30 AM-12:30 PM</th>
+<th align="left">Afternoon Session, 1:30 PM-4:30 PM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Jan 29</td>
+<td align="left"><em>Introduction to R</em></td>
+<td align="left"><em>Introduction to Bioconductor</em></td>
+</tr>
+<tr class="even">
+<td align="left">Jan 30</td>
+<td align="left"><em>Introduction to Microarray Analysis</em></td>
+<td align="left"><em>Introduction to NGS Sequence Analysis</em></td>
+</tr>
+</tbody>
+</table>
+<p>The course will include frequent, short hands-on periods so students should bring their own laptops with a working installation of <em>R</em>, <strong>version 3.1 or later</strong>. In addition, several <em>R</em> packages will be used which must be installed prior to the course.</p>
+<p><em>R</em> is a console application. Students who prefer a more graphically-oriented working environment will find that using <em>RStudio</em> as an environment in which to run <em>R</em> makes life much easier. If you are comfortable running programs, viewing output, and editing files at the terminal, you will not need <em>RStudio</em> in order to take the course. However, <em>RStudio</em> offers quite an array of functions that you may still find useful and it is well worth a look.</p>
+<div id="r-installation" class="section level4">
+<h4>R Installation</h4>
+<p>The R program and instructions for its installation under Linux, Mac OSX, and Windows can be found here:</p>
+<blockquote>
+<p><a href="http://cran.r-project.org/">http://cran.r-project.org/</a></p>
+</blockquote>
+</div>
+<div id="bioconductor-and-bioconductor-package-installation" class="section level4">
+<h4>Bioconductor and Bioconductor Package Installation</h4>
+<p>Complete instructions for the installation of the basic and additional <em>Bioconductor</em> packages are found here:</p>
+<blockquote>
+<p><a href="http://www.bioconductor.org/install/">http://www.bioconductor.org/install/</a></p>
+</blockquote>
+<p>In addition to the basic <em>Bioconductor</em> package, please install these additional <em>Bioconductor</em> packages prior to the start of the class:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Biostrings</em></td>
+<td align="left"><em>BSgenome</em></td>
+<td align="left"><em>BSgenome.Celegans.UCSC.ce6</em></td>
+</tr>
+<tr class="even">
+<td align="left"><em>TxDb.Celegans.UCSC.ce6.ensGene</em></td>
+<td align="left"><em>GenomicFeatures</em></td>
+<td align="left"><em>GenomicRanges</em></td>
+</tr>
+<tr class="odd">
+<td align="left"><em>GenomicAlignments</em></td>
+<td align="left"><em>TxDb.Hsapiens.UCSC.hg19.knownGene</em></td>
+</tr>
+</tbody>
+</table>
+<p>Briefly, the following code, executed from within an R session, should serve to install the basic <em>Bioconductor</em> package as well as the additional packages listed above:</p>
+<pre><code># First, download the Bioconductor installer, biocLite()
+
+source(&quot;http://bioconductor.org/biocLite.R&quot;)
+
+# Now, use the installer to install several packages at once
+# The base package, Biobase, will be installed automatically
+
+biocLite(pkgs=c(&quot;Biostrings&quot;, &quot;BSgenome&quot;, &quot;BSgenome.Celegans.UCSC.ce6&quot;, &quot;TxDb.Celegans.UCSC.ce6.ensGene&quot;, &quot;GenomicFeatures&quot;, &quot;GenomicRanges&quot;, &quot;GenomicAlignments&quot;, &quot;TxDb.Hsapiens.UCSC.hg19.knownGene&quot;))</code></pre>
+</div>
+<div id="rstudio-installation" class="section level4">
+<h4>RStudio Installation</h4>
+<p>Install the “Desktop, Open Source Edition”:</p>
+<blockquote>
+<p><a href="http://www.rstudio.com/products/RStudio/#Desk">http://www.rstudio.com/products/RStudio/#Desk</a></p>
+</blockquote>
+</div>
+<div id="class-outline" class="section level2">
+<h2>Class Outline</h2>
+<div id="day-1-jan-29-morning-session-introduction-to-r" class="section level3">
+<h3>Day 1 (Jan 29), Morning Session: Introduction to R</h3>
+<ul>
+<li>The R environment
+<ul>
+<li>Starting an R Session, Setting Options</li>
+<li>Listing Variables, Editing Commands, Using the R History</li>
+<li>Getting Help on an R Function</li>
+<li>Logging a Session to a File</li>
+<li>Running External R Code</li>
+<li>Installing and Loading Packages</li>
+<li>Ending a Session, Saving Your Work</li>
+</ul></li>
+<li>The Elements of R
+<ul>
+<li>Numeric</li>
+<li>Character<br /></li>
+<li>Logical</li>
+<li>Missing Values</li>
+</ul></li>
+<li>R Data Structures
+<ul>
+<li>Vectors</li>
+<li>Matrices</li>
+<li>Lists</li>
+<li>Data.Frames</li>
+<li>Factors</li>
+<li>Functions</li>
+<li>Other Complex Structures</li>
+</ul></li>
+<li>Procedures
+<ul>
+<li>Reading and Writing Data</li>
+<li>Exploring and Summarizing Data</li>
+<li>Dealing with Missing Data</li>
+<li>Restructuring Data</li>
+<li>Relabeling Data</li>
+<li>Subsetting Data</li>
+<li>Operating on Rows or Columns of Data</li>
+<li>Saving R Objects for Later Use</li>
+<li>Graphing Data</li>
+<li>Simple Statistical Tests</li>
+<li>Example: A Simple Analysis of Probe Intensity Data</li>
+</ul></li>
+<li>Project: Creating a Graphical Function in 4 Easy Steps
+<ul>
+<li>Step 1: Create an X-Y Plot to Compare Two Arrays</li>
+<li>Step 2: Package the X-Y Plot as a Function</li>
+<li>Step 3: Create a Median Array as a Better Standard for Comparison</li>
+<li>Step 4: Rotate and Scale the Plot–Voila, You Have Created a MAPlot!</li>
+</ul></li>
+</ul>
+</div>
+<div id="day-1-jan-29-afternoon-session-introduction-to-bioconductor" class="section level3">
+<h3>Day 1 (Jan 29), Afternoon Session: Introduction to Bioconductor</h3>
+<ul>
+<li>Installing Bioconductor</li>
+<li>An Overview of Bioconductor Packages</li>
+<li>Fundamental Packages
+<ul>
+<li>Biobase: the Foundation</li>
+<li>Biostrings: A Representation of Biological Sequences</li>
+<li>BSgenome: A Representation of Complete Genomic Sequences</li>
+<li>GenomicRanges: Manipulation of Genomic Intervals</li>
+<li>GenomicFeatures: Manipulation of Genomic Features</li>
+<li>GenomicAlgnments: Manipulation of Short Genomic Alignments</li>
+</ul></li>
+<li>Two Fundamental Structures to Contain Experiment Data
+<ul>
+<li>The ExpressionSet for Array Data
+<ul>
+<li>Constructing an ExpressionSet</li>
+<li>Analyzing an ExpressionSet</li>
+</ul></li>
+<li>The SummarizedExperiment for NGS Sequence Data
+<ul>
+<li>Constructing a SummarizedExperiment</li>
+<li>Analyzing a SummarizedExperiment</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+
+
+</body>
+</html>
