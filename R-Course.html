@@ -131,6 +131,7 @@ blockquote {
    margin:0;
    padding-left: 1em;
    border-left: 0.5em #EEE solid;
+   font-size:9pt;
 }
 
 hr {
@@ -249,7 +250,12 @@ img {
 
 <div id="a-short-course-in-r-for-biologists" class="section level1">
 <h1>A Short Course in R for Biologists</h1>
-<p><em>“A Short Course in R for Biologists”</em> is a two-day course given in four three-hour sessions entitled: <em>Introduction to R, Introduction to Bioconductor, Introduction to Microarray Analysis</em>, and <em>Introduction to NGS Sequence Analysis</em>.</p>
+<p><em>“A Short Course in R for Biologists”</em> is a two-day course given in four three-hour sessions entitled: <em>Introduction to R, Introduction to Bioconductor, Introduction to Microarray Analysis</em>, and <em>Introduction to NGS Data Analysis</em>.</p>
+<hr />
+<blockquote>
+<p><strong>No Registration Required</strong><br /><strong>Date &amp; Time:</strong> Thursday, 29 January 2015 - 9:30am to Friday, 30 January 2015 - 4:30pm<br /><strong>Location:</strong> FAES Classroom 4<br /><strong>Presenters:</strong> David Wheeler, Fathi Elloumi, Sean Davis<br /><strong>Affiliations:</strong> CCR, Leidos<br /><strong>Format:</strong> Lecture/Hands-On</p>
+</blockquote>
+<hr />
 <table>
 <thead>
 <tr class="header">
@@ -267,7 +273,7 @@ img {
 <tr class="even">
 <td align="left">Jan 30</td>
 <td align="left"><em>Introduction to Microarray Analysis</em></td>
-<td align="left"><em>Introduction to NGS Sequence Analysis</em></td>
+<td align="left"><em>Introduction to NGS Data Analysis</em></td>
 </tr>
 </tbody>
 </table>
@@ -302,6 +308,16 @@ img {
 <tr class="odd">
 <td align="left"><em>GenomicAlignments</em></td>
 <td align="left"><em>TxDb.Hsapiens.UCSC.hg19.knownGene</em></td>
+<td align="left"><em>affy</em></td>
+</tr>
+<tr class="even">
+<td align="left"><em>simpleaffy</em></td>
+<td align="left"><em>arrayQualityMetrics</em></td>
+<td align="left"><em>limma</em></td>
+</tr>
+<tr class="odd">
+<td align="left"><em>survival</em></td>
+<td align="left"><em>ggplot2</em></td>
 </tr>
 </tbody>
 </table>
@@ -313,7 +329,7 @@ source(&quot;http://bioconductor.org/biocLite.R&quot;)
 # Now, use the installer to install several packages at once
 # The base package, Biobase, will be installed automatically
 
-biocLite(pkgs=c(&quot;Biostrings&quot;, &quot;BSgenome&quot;, &quot;BSgenome.Celegans.UCSC.ce6&quot;, &quot;TxDb.Celegans.UCSC.ce6.ensGene&quot;, &quot;GenomicFeatures&quot;, &quot;GenomicRanges&quot;, &quot;GenomicAlignments&quot;, &quot;TxDb.Hsapiens.UCSC.hg19.knownGene&quot;))</code></pre>
+biocLite(pkgs=c(&quot;Biostrings&quot;, &quot;BSgenome&quot;, &quot;BSgenome.Celegans.UCSC.ce6&quot;, &quot;TxDb.Celegans.UCSC.ce6.ensGene&quot;, &quot;GenomicFeatures&quot;, &quot;GenomicRanges&quot;, &quot;GenomicAlignments&quot;, &quot;TxDb.Hsapiens.UCSC.hg19.knownGene&quot;,&quot;affy&quot;,&quot;simpleaffy&quot;,&quot;arrayQualityMetrics&quot;,&quot;limma&quot;,&quot;survival&quot;,&quot;ggplot2&quot;))</code></pre>
 </div>
 <div id="rstudio-installation" class="section level4">
 <h4>RStudio Installation</h4>
@@ -405,6 +421,28 @@ biocLite(pkgs=c(&quot;Biostrings&quot;, &quot;BSgenome&quot;, &quot;BSgenome.Cel
 </ul></li>
 </ul></li>
 </ul>
+</div>
+<div id="day-2-jan-30-morning-session-introduction-to-microarray-analysis" class="section level3">
+<h3>Day 2 (Jan 30), Morning Session: Introduction to Microarray Analysis</h3>
+<p>The objective of this session is to initiate students in the analysis of microarrays using R and <em>Bioconductor</em>. To better help students take advantage of the microarray services offered by the Laboratory of Molecular Technology at NCI-Frederick, the focus of the course will be on the analysis of data from <em>Affymetrix</em> chips. It is assumed that the student has some knowledge of microarray workflows.</p>
+<ul>
+<li>Downloading Data from The Cancer Genome Atlas Databases</li>
+<li>Preliminary Steps: Array Pre-Processing
+<ul>
+<li>Checking the Quality of Arrays</li>
+<li>Performing Array Normalization</li>
+</ul></li>
+<li>Identifying Differentially Expressed Genes</li>
+<li>Data Visualization
+<ul>
+<li>Performing Principal Component Analysis (PCA)</li>
+<li>Computing and Interpreting Heatmaps</li>
+<li>Computing and Interpreting Kaplan Meir Curves</li>
+</ul></li>
+</ul>
+</div>
+<div id="day-2-jan-30-afternoon-session-introduction-to-ngs-data-analysis" class="section level3">
+<h3>Day 2 (Jan 30), Afternoon Session: Introduction to NGS Data Analysis</h3>
 </div>
 </div>
 </div>
